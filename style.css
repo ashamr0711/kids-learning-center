@@ -1,0 +1,388 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif; 
+}
+
+body {
+    background-color: #00ffff; 
+  
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #f0ffff;
+}
+
+.logo {
+    color: #00ffff;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}   
+
+.nav-links a {
+    text-decoration: underline;
+    color: purple;
+    margin-right: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn-join {
+    padding: 4px 8px;
+    border-radius: 20px;
+    border: 1.5px solid #333;
+    background: rgb(121, 249, 249);
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 50px;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.subtitle {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.line {
+    border: 0;
+    height: 2px;
+    background: #fff;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-learn {
+    background: #00008b;
+    color: white;
+    padding: 5px 10px;
+    border: #676565;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+/* Circular Image Frame */
+.hero-image {
+    flex-shrink: 0;
+}
+
+.circle-frame {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid rgba(255, 255, 255, 0.2);
+}
+
+.circle-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive adjustment */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/*    ----- ABOUT ----- Container for the page content */
+.container {
+    padding: 40px 10%;
+    background-color: #ffffff; /* The about section usually has a clean white background */
+}
+
+/* Row Styling */
+.section-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 50px;
+}
+
+/* This reverses the order for every second section */
+.section-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-block {
+    flex: 1;
+}
+
+.image-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-block img {
+    max-width: 300px; /* Adjust based on your images */
+    height: auto;
+}
+
+/* Specific Heading and Line styles from image */
+.text-block h2 {
+    font-size: 28px;
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.thin-line {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin-bottom: 20px;
+}
+
+.text-block p {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Active Link Highlight */
+.nav-links a.active {
+    font-weight: bold;
+    color: blue;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .section-row, .section-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Contact===== Page Specific Background */
+.contact-body {
+    background-color: #c5e07d; /* Light green background from image */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 60px 50px;
+    gap: 40px;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 600px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Form Card Styling */
+.contact-card {
+    background-color: #9bc666; /* Darker green for the card */
+    padding: 40px;
+    border-radius: 50px; /* Highly rounded corners */
+    border: 1px solid #333;
+    width: 400px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-card h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+/* Form Inputs */
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-card input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-card input::placeholder {
+    color: #999;
+}
+
+/* Form Submit Button */
+.btn-submit {
+    background-color: #00008b; /* Navy blue */
+    color: white;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #0000cd;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-card {
+        width: 100%;
+    }
+}
+
+/* ======Gallery Page Container */
+.gallery-body {
+    background-color: #f0ffff; /* Light blue background like the navbar */
+}
+
+.gallery-main {
+    padding-top: 20px;
+}
+
+/* 4-Column Grid Layout */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 15px; /* Space between images */
+    padding: 0 40px 40px 40px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 200px; /* Adjust height to match your preference */
+    object-fit: cover; /* Keeps images from stretching */
+    border-radius: 15px; /* Slight roundness as seen in image */
+}
+
+/* Blue Banner at the bottom */
+.blue-banner {
+    background-color: #0000ff; /* Bright blue */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.blue-banner h2 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Responsive for Tablets and Phones */
+@media (max-width: 1024px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+}
+
+/* ========Details Page Specifics */
+.details-body {
+    background-color: #7fffd4; /* Aquamarine/Teal background */
+}
+
+.details-container {
+    padding: 40px 5%;
+    text-align: center; /* Centers most text on this page */
+}
+
+/* Category & Benefits Rows */
+.category-row, .benefits-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    font-weight: bold;
+    color: #0000ff; /* Blue text for categories */
+    font-size: 18px;
+}
+
+.benefits-list {
+    color: #000; /* Black text for the second row */
+    font-size: 16px;
+}
+
+/* Benefits Title */
+.benefits-intro h1 {
+    font-size: 36px;
+    margin: 30px 0;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.benefits-intro .quote {
+    font-size: 20px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    line-height: 1.4;
+}
+
+/* Bottom Paragraph Alignment */
+.bottom-text {
+    text-align: left; /* The last paragraph is left-aligned in the image */
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.bottom-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Thin horizontal line for this page */
+.details-container .thin-line {
+    border: 0;
+    height: 1px;
+    background: #9e9c9c; /* Darker line for contrast */
+    margin: 0;
+}
